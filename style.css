@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f9fc;
+}
+
+/* 🔹 Navbar */
+.navbar {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 50px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.navbar nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar nav a:hover {
+  text-decoration: underline;
+}
+
+/* 🌈 Buttons */
+.signin-btn,
+button {
+  background: white;
+  color: #0077b6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.signin-btn:hover,
+button:hover {
+  background: #caf0f8;
+  transform: scale(1.05);
+}
+
+/* 🌟 Hero Section */
+.hero {
+  background: url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1600&q=80') center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero h1, .hero p, .search-bar, .stats {
+  position: relative;
+  z-index: 1;
+}
+
+/* 🔍 Search Bar */
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-bar input, .search-bar select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 200px;
+}
+
+.search-bar button {
+  background: #00b4d8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* 💡 Skills Section */
+.skills {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #caf0f8, #ade8f4, #90e0ef);
+}
+
+.skills h2 {
+  font-size: 2rem;
+  color: #023e8a;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.skill {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 180px;
+  height: 200px;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.skill img {
+  width: 80px;
+  height: 80px;
+  transition: 0.3s ease;
+}
+
+.skill p {
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #0077b6;
+}
+
+.skill:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: #f1faee;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.skill:hover img {
+  transform: scale(1.1);
+}
+
+
+
+/* 🔐 Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 15px;
+  width: 350px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content h2 {
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* 🧠 About & Contact */
+.about, .contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about h2, .contact h2 {
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+/* 🌟 Footer */
+footer {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  color:  white;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+}

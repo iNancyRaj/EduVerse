@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduVerse – Student Learning Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 🌟 Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">Tech_Journey(EduVerse)</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#skills">Courses</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button class="signin-btn">Sign In</button>
+    </nav>
+  </header>
+
+  <!--  Hero Section -->
+  <section class="hero">
+    <h1>The Future Begins Here!</h1>
+    <p>
+      Working collaboratively to ensure every student thrives academically, socially, and emotionally.
+    </p>
+
+   <div class="search-bar">
+  <select id="practiceSelect">
+    <option value="">All Categories</option>
+<option value="https://www.testdome.com/tests/web-developer-online-test/16">Web Development</option>
+<option value="https://www.frontendpractice.com/">Frontend Development</option>
+<option value="https://www.testdome.com/tests/web-design-test/263">Backend Development</option>
+<option value="https://www.testdome.com/tests/web-developer-online-test/16">Full Stack Development</option>
+<option value="https://www.w3schools.com/html/html_exercises.asp">HTML</option>
+<option value="https://www.w3schools.com/css/css_exercises.asp">CSS</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">JavaScript</option>
+<option value="https://www.frontendpractice.com/">React</option>
+<option value="https://www.testdome.com/tests/web-developer-online-test/16">Node.js</option>
+<option value="https://www.testdome.com/tests/web-developer-online-test/16">Express.js</option>
+<option value="https://www.testdome.com/tests/web-developer-online-test/16">MongoDB</option>
+<option value="https://www.testdome.com/tests/web-developer-online-test/16">SQL</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Python</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">C Programming</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">C++</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Java</option>
+<option value="https://leetcode.com/">Data Structures</option>
+<option value="https://leetcode.com/">Algorithms</option>
+<option value="https://leetcode.com/">Object Oriented Programming (OOPs)</option>
+<option value="https://www.kaggle.com/">Data Science</option>
+<option value="https://www.kaggle.com/">Machine Learning</option>
+<option value="https://www.kaggle.com/">Deep Learning</option>
+<option value="https://www.kaggle.com/">Artificial Intelligence</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Computer Vision</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Natural Language Processing (NLP)</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Cloud Computing</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Cybersecurity</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Blockchain</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Internet of Things (IoT)</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Robotics</option>
+<option value="https://www.sanfoundry.com/1000-microcontroller-questions-answers/">Embedded Systems</option>
+<option value="https://www.sanfoundry.com/1000-embedded-system-questions-answers/">Electronics</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">VLSI Design</option>
+<option value="https://www.sanfoundry.com/embedded-systems-questions-answers-microcontroller-basic-embedded-system/">Digital Electronics</option>
+<option value="https://www.sanfoundry.com/1000-microcontroller-questions-answers/">Microcontrollers (8051, Arduino, etc.)</option>
+<option value="https://www.testbook.com/objective-questions/mcq-on-microprocessors-and-microcontrollers--5eea6a1439140f30f369f264">Microprocessors</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Control Systems</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Signals and Systems</option>
+<option value="https://www.qualexe.com/mcq/basic-electronics">Power Electronics</option>
+<option value="https://www.qualexe.com/mcq/basic-electronics">Electrical Machines</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Operating Systems</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Computer Networks</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Database Management Systems (DBMS)</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Software Engineering</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Aptitude & Reasoning</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Communication Skills</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Resume Building</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Interview Preparation</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">MATLAB</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">AutoCAD</option>
+<option value="https://www.practiceaptitudetests.com/industry/web-developer/">Power BI</option>
+
+    <!-- Add other options with corresponding links -->
+  </select>
+
+  <button id="startPracticeBtn">🔍Start Practice</button>
+</div>
+
+<script>
+  const select = document.getElementById('practiceSelect');
+  const button = document.getElementById('startPracticeBtn');
+
+  button.addEventListener('click', () => {
+    const selectedValue = select.value;
+
+    if (selectedValue) {
+      // Open the selected link in a new tab
+      window.open(selectedValue, '_blank');
+    } else {
+      alert('Please select a category to start practice.');
+    }
+  });
+</script>
+
+
+    <div class="stats">
+      <p>🌍Courses</p>
+      <p>📝Practice</p>
+      <p>🎯Resources</p>
+    </div>
+  </section>
+
+
+
+ 
+<!-- 💡 Skills Section -->
+<section class="skills" id="skills">
+  <h2>Top Software Developer Skills</h2>
+  <div class="skills-grid">
+    <a href="https://www.w3schools.com/html/" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML">
+      <p>HTML</p>
+    </a>
+
+    <a href="https://www.w3schools.com/css/" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS">
+      <p>CSS</p>
+    </a>
+
+    <a href="https://www.w3schools.com/js/" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+      <p>JavaScript</p>
+    </a>
+
+    <a href="https://react.dev/" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React.js">
+      <p>React.js</p>
+    </a>
+
+    <a href="https://nodejs.org/en/learn" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Node.js">
+      <p>Node.js</p>
+    </a>
+
+    <a href="https://expressjs.com/" target="_blank" class="skill">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" alt="Express.js">
+      <p>Express.js</p>
+    </a>
+
+    <a href="https://www.mongodb.com/docs/" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="MongoDB">
+      <p>MongoDB</p>
+    </a>
+
+    <a href="https://www.python.org/about/gettingstarted/" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python">
+      <p>Python</p>
+    </a>
+
+    <a href="https://cplusplus.com/doc/tutorial/" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++">
+      <p>C++</p>
+    </a>
+
+    <a href="https://docs.github.com/en/get-started" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="GitHub">
+      <p>GitHub</p>
+    </a>
+
+    <a href="https://tailwindcss.com/docs" target="_blank" class="skill">
+      <img src="https://avatars.githubusercontent.com/u/67109815?s=200&v=4" alt="Tailwind CSS">
+      <p>Tailwind CSS</p>
+    </a>
+
+    <a href="https://firebase.google.com/docs" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="Firebase">
+      <p>Firebase</p>
+    </a>
+
+    <a href="https://www.coursera.org/learn/ui-ux-design" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="UI/UX Design">
+      <p>UI/UX Design</p>
+    </a>
+
+    <a href="https://www.w3schools.com/sql/" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/2772/2772128.png" alt="SQL">
+      <p>SQL</p>
+    </a>
+
+    <a href="https://linuxjourney.com/" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt="Linux">
+      <p>Linux</p>
+    </a>
+
+    <a href="https://www.geeksforgeeks.org/problem-solving/" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/3039/3039387.png" alt="Problem Solving">
+      <p>Problem Solving</p>
+    </a>
+
+    <a href="https://www.coursera.org/learn/machine-learning" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/1048/1048944.png" alt="AI & ML">
+      <p>AI & ML</p>
+    </a>
+
+    <a href="https://aws.amazon.com/training/" target="_blank" class="skill">
+      <img src="https://cdn-icons-png.flaticon.com/512/873/873120.png" alt="Cloud Computing">
+      <p>Cloud Computing</p>
+    </a>
+  </div>
+</section>
+
+  <!-- 🔐 Sign In Popup -->
+  <div id="signinModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Sign In to EduVerse</h2>
+      <form id="signinForm" onsubmit="return validateLogin()">
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+        <label>Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+        <button type="submit">Sign In</button>
+      </form>
+      <p class="signup-link">Don’t have an account? <a href="#">Sign up</a></p>
+    </div>
+  </div>
+
+  <!-- 🧠 About Section -->
+  <section id="about" class="about">
+    <h2>About EduVerse</h2>
+    <p>
+      EduVerse is a comprehensive learning portal designed for students across all branches. It offers curated tutorials, coding challenges, and daily tips to make learning engaging, effective, and fun. With EduVerse, students can enhance their skills, practice regularly, and explore a variety of resources to grow confidently in their field.
+    </p>
+  </section>
+
+  <!-- ✉️ Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>
+      Have queries or suggestions? Reach out to us at:
+      <br />
+      <strong>📧 inancyraj@gmail.com</strong>
+    </p>
+    <button onclick="window.location.href='mailto:inancyraj@gmail.com'">Send Mail</button>
+  </section>
+
+  <!-- 🌟 Footer -->
+  <footer>
+    <p>Designed by <strong>Nancy Raj ❤️</strong></p>
+  </footer>
+
+  <script>
+    // Show Sign In Popup
+    document.querySelector(".signin-btn").addEventListener("click", function () {
+      document.getElementById("signinModal").style.display = "flex";
+    });
+
+    // Close Popup
+    function closeModal() {
+      document.getElementById("signinModal").style.display = "none";
+    }
+
+    // Validate Login
+    function validateLogin() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      if (email === "student@eduverse.com" && password === "12345") {
+        alert("Login Successful! 🎉");
+        closeModal();
+      } else {
+        alert("Invalid email or password. Try again!");
+      }
+      return false;
+    }
+
+    // Close modal on background click
+    window.onclick = function (event) {
+      const modal = document.getElementById("signinModal");
+      if (event.target == modal) modal.style.display = "none";
+    };
+  </script>
+</body>
+</html>
